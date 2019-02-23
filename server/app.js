@@ -49,7 +49,7 @@ for(i in files){
 
 // 访问静态资源
 app.use(express.static(path.resolve(__dirname, '../dist')));
-app.use('/drag', express.static(path.resolve(__dirname, '../public')));
+// app.use('/drag', express.static(path.resolve(__dirname, '../public')));
 // 访问单页
 app.get('*', function (req, res) {
   var html = fs.readFileSync(path.resolve(__dirname, '../dist/index.html'), 'utf-8');
